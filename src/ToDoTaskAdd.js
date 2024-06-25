@@ -10,7 +10,7 @@ class ToDoTaskAddInner extends React.Component {
 		
 		this.state = {
 			name: '',
-			decription: ''
+			description: ''
 		}
 		
 		this.onNameChange = this.onNameChange.bind(this);
@@ -48,8 +48,8 @@ class ToDoTaskAddInner extends React.Component {
 		}).then((res) => {
 			return res.json();
 		}).then((data) => {
-			this.props.dispatch(todoAdd(data._id, data.name, data.description))
-			this.props.history('/')
+			this.props.dispatch(todoAdd(data._id, data.name, data.description));
+			this.props.history('/');
 		})
 	}
 
